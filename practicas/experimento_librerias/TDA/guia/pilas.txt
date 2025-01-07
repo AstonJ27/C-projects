@@ -1,0 +1,33 @@
+//---------------------------------PILAS-------------------------------
+
+typedef struct NodoP { 
+    itemP elem;
+    struct NodoP *sig;
+}NodoP;
+
+typedef NodoP * pila;
+
+//crea una pila vacia
+pila crearPila();
+
+//comprueba si la pila esta vacia
+int isvoidP(pila pil);
+
+//retorna el elemento en la cima de la pila
+itemP cima(pila pil);
+
+//inserta un nuevo elemento a la cima de la pila
+void insertarCima(pila *pil, itemP x);
+
+//elimina un elemento de la cima
+void eliminarCima(pila *pil);
+
+//quita un elemento de la cima y guarda su valor
+itemP quitarCima(pila *pil);
+
+//vacia la pila
+void vaciarPila(pila *pil);
+
+//devuelve el tamaño de la pila
+int tamanioPila(pila pil);
+

@@ -1,0 +1,15 @@
+//palindromo recursivo (me di cuenta que no me sirve para cadenas con mas de una palabra (con espacios xd))
+//el vector p representa una cadena de caracteres, inf es el extremo inferior del arreglo (que empieza siendo 1)
+//y sup es del tamaño del arreglo
+
+func P_R(Vector:p, int inf, sup): bool
+{
+    if(¬(p[inf] = p[sup])) then
+        return(false)
+    else
+        if(inf=sup || sup=inf +1)
+            return(true)
+        end if
+        return(true && P_R(p, inf+1, sup-1))
+    end if
+}

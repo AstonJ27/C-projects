@@ -1,0 +1,57 @@
+// por simplicidad los numeros binarios son del mismo tamaño
+//los vectores a y b estan inicializados con 1 y cero al entrar al procedimiento para representar numeros binarios
+//ta y tb son los tamaños de los vectores a y b mientras que c es el acarreo que inicia valiendo cero
+// s es el vector de resultado que tiene la misma longitud que los otros vectores +1 (por si el acarreo da un numero de mas bits)
+
+proc sumaBin(Vector: a[], b[], int ta, tb, c; ref: vector: s; int ts)
+    var
+        int i, j, cond
+{
+    i <- ta
+    j <- tb
+    s[1] <- 0
+    cond <- a[i] + b[j] + c
+    if(i=1 || j=1 ) then
+        switch(cond):
+            case 0:
+                s[i+1] <- 0
+                ts <- ts+2
+            case 1:
+                s[i+1] <- 1
+                ts <- ts+2
+            case 2:
+                s[i+1] <- 0
+                s[i] <- 1
+                ts <- ts+2
+            case 3:
+                s[i+1] <- 1
+                s[i] <- 1
+                ts <- ts+2
+            else:
+        end switch
+    else
+        switch(cond):
+            case 0:
+                s[i] <- 0
+                c <- 0
+                ts <- ts+1
+                sumaBin(a,b,i-1,j-1,c,s,ts)
+            case 1:
+                s[i] <- 1
+                c <- 0
+                ts <- ts+1
+                sumaBin(a,b,i-1,j-1,c,s,ts)
+            case 2:
+                s[i] <- 0
+                c <- 1
+                ts <- ts+1
+                sumaBin(a,b,i-1,j-1,c,s,ts)
+            case 3:
+                s[i] <- 1
+                c <- 1
+                ts <- ts+1
+                sumaBin(a,b,i-1,j-1,c,s,ts)
+            else:
+        end switch
+    end if
+}

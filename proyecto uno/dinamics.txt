@@ -1,0 +1,6 @@
+gcc -shared -o libcolores.so colores.c -fPIC
+gcc -shared -o libcartas.so cartas.c -fPIC -L. -lcolores
+gcc -shared -o liblistas.so listas.c -fPIC -L. -lcartas
+gcc -shared -o libpilas.so pilas.c -fPIC -L. -lcartas
+gcc -shared -o libuno.so uno.c -fPIC -L. -llistas -lpilas
+

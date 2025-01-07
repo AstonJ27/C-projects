@@ -1,0 +1,42 @@
+las listas enlazadas se dividen en cuatro tipos que trataremos con los identificadores: S, D, SC, DC //los llamaremos id
+para ver informacion de un tipo de lista en especifico "make listaId"
+
+las funciones para las listas poseen como sufijo la id de la lista que manejan, las funciones elementales son:
+
+//crea una lista vacia
+tipo_nodo *crear();
+
+//inserta un elemento en la lista
+tipo_nodo *crearN(item x);
+
+//comprueba si una lista esta vacia o no
+int isvoid(tipo_nodo *lista);
+
+//inserta un elemento al inicio de la lista
+void insertarIni(tipo_nodo **lista, item x);
+
+// inserta un elemento en una posicion valida (no nula)
+void insertar(tipo_nodo *lista, item x, int pos);
+
+//Recorre a una posicion de la lista y retorna esa sublista
+//si la posicion es invalida retorna NULL
+tipo_nodo *recorrer(tipo_nodo *lista, int pos);
+
+//muestra todos los elementos de la lista
+void imprimir(tipo_nodo *lista);
+
+//Consulta si un elemento existe en la lista y retorna su posicion
+//si no existe retorna 0 (false)
+int existe(tipo_nodo *lista, item x);
+
+//Retorna la cantidad de elementos de la lista si esta vacia retorna 0 (false)
+int tamanio(tipo_nodo *lista);
+
+//elimina una lista por completo
+void eliminar(tipo_nodo *lista);
+
+//elimina un elemento en una posicion si la posicion es 0 retorna NULL
+tipo_nodo *eliminarPos(tipo_nodo *lista, int pos);
+
+//ordena una lista de manera ascendente
+void ordenar(tipo_nodo *lista);

@@ -1,0 +1,39 @@
+//---------------------------------COLAS-------------------------------
+//tipo de nodo usado
+typedef struct NodoCola{
+    itemC elem;
+    struct NodoCola *sig;
+}NodoC;
+
+//el tipo de dato definido
+typedef struct{
+    NodoC *ini;
+    NodoC *fin;
+}cola;
+
+//crea una cola vacia
+void crearCola(cola *col);
+
+//comprueba si la cola esta vacia
+int isvoidC(cola col);
+
+//crea un nodo para una cola
+NodoC *crearNCola(itemC x);
+
+//inserta un elemento a una cola si esta vacia al inicio, sino al final
+void insertarACola(cola *col, itemC x);
+
+//devuelve el elemento que esta al inicio de la fila
+itemC frenteCola(cola col);
+
+//elimina el elemento que esta al inicio de la fila
+void eliminarDeCola(cola *col);
+
+//quita un elemento de la cola y retorna su valor
+itemC quitarDeCola(cola *col);
+
+//vacia una cola completa
+void vaciarCola(cola *col);
+
+// devuelve el tamaño de una cola
+int tamanioCola(cola col);

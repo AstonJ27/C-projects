@@ -1,0 +1,14 @@
+como usar beccom:
+argumentos:
+	-b: busca un archivo dentro de un directorio o subdirectorios
+	beccom -b <directorio_de_entrada> <objetivo_1>...<objetivo_n>
+
+	-c: compila archivos en c dentro de un directorio o subdirectorios
+	beccom -c <directorio_de_entrada> <objetivo_1.c>...<objetivo_n.c>
+	
+	-cl: compila archivos en c dentro de un directorio o subdirectorios 
+	     incluyendo hasta 5 librerias del usuario:
+	beccom -cl <directorio_de_entrada> <objetivo.c> <libreria_1.h>...<libreria_5.h>
+
+	-h: oculta un archivo o directorio, si ya esta oculto lo va a revelar
+	beccom -h <directorio_de_entrada> <objetivo_1>...<objetivo_n>

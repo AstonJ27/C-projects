@@ -1,0 +1,18 @@
+Ceros: 4 (una de cada color)
+Unos: 8 (dos de cada color: rojo, amarillo, verde, azul)
+Dos: 8 (dos de cada color)
+Tres: 8 (dos de cada color)
+Cuatro: 8 (dos de cada color)
+Cinco: 8 (dos de cada color)
+Seis: 8 (dos de cada color)
+Siete: 8 (dos de cada color)
+Ocho: 8 (dos de cada color)
+Nueve: 8 (dos de cada color)
+
+Cartas de acción (salto, reversa, +2):
+Salto: 8 (dos de cada color)
+Reversa: 8 (dos de cada color)
++2: 8 (dos de cada color)
+Cartas comodín:
+Comodín: 4
+Comodín +4: 4

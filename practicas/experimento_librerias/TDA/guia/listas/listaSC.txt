@@ -1,0 +1,46 @@
+//---------------------------------LISTAS SIMPLEMENTE ENLAZADAS CIRCULARMENTE-------------------------------
+
+typedef struct NodoSimpleC {
+    itemSC elem;
+    struct NodoSimpleC *prox;
+} NodoSimpleC;
+
+typedef NodoSimpleC * listaSC;
+
+//crea una lista vacia
+listaSC crearSC();
+
+//crea un nodo con elemento qu apunta a si mismo
+listaSC crearNSC(itemSC x);
+
+//comprueba si una lista esta vacia
+int isvoidSC(listaSC list);
+
+//inserta en la primera posicionnecesita un puntero que guarde la posicion final
+void insertarIniSC(listaSC *list, itemSC x, listaSC ult);
+
+//inserta el elemento en la posicion pos%(tamaño+1)
+void insertarSC(listaSC *list, itemSC x, int pos);
+
+// retorna la posicion%(tam+1)
+//recorrer(tamanio(l)) = posicion final
+listaSC recorrerSC(listaSC list, int pos);
+
+//imprime la lista
+void imprimirSC(listaSC list, char *type);
+
+
+//comprueba si un elemento existe y devuelve su posicion
+int existeSC(listaSC list, itemSC x);
+
+//retorna la cantidad de elementos de la lista
+int tamanioSC(listaSC list);
+
+// elimina la lista por completo y la hace nula
+void eliminarSC(listaSC *list);
+
+// elimina un elemento de la lista
+listaSC eliminarPosSC(listaSC list, int pos);
+
+//ordena la lista
+void ordenarSC(listaSC list);

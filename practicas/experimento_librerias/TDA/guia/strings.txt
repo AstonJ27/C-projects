@@ -1,0 +1,16 @@
+//---------------preparacion para trabajar con datos de tipo string---------
+
+
+#define stringS //return strcmp(*(item *)a, *(item *)b); //para strings
+#define stringD //return strcmp(*(itemD *)a, *(itemD *)b); //para strings
+#define stringSC //return strcmp(*(itemSC *)a, *(itemSC *)b); //para strings
+#define stringDC //return strcmp(*(itemDC *)a, *(itemDC *)b); //para strings
+
+//eliminar barra de comentario en la libreria segun la lista que se trabajara con string
+//prepara un string para ingresarlo a un  nodo cualquiera
+char *prepare(char buff[]);
+
+ejemplo:
+        char buff[100];
+	scanf("%s",buff);
+	insertarCima(&a,prepareP(buff));

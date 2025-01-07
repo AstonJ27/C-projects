@@ -1,0 +1,48 @@
+//---------------------------------LISTAS SIMPLEMENTE ENLAZADAS-------------------------------
+
+// tipo de dato NodoSimple utilizado para crear listas simplemente enlazadas
+typedef struct NodoSimple {
+    item elem;
+    struct NodoSimple *prox;
+} NodoSimple;
+
+typedef NodoSimple* lista;
+
+//crea una lista vacia
+lista crearS();
+
+//crea un nodo con elemento que puede ser insertado a la lista
+lista crearNS(item x);
+
+//comprueba si una lista esta vacia o no
+int isvoidS(lista lista);
+
+//inserta un elemento al inicio de la lista
+void insertarIniS(lista *lista, item x);
+
+// inserta un elemento en una posicion valida (no nula)
+void insertarS(lista *lista, item x, int pos);
+
+//Recorre a una posicion de la lista y retorna esa sublista
+//si la posicion es invalida retorna NULL
+lista recorrerS(lista lista, int pos);
+
+//muestra todos los elementos de la lista
+void imprimirS(lista lista, char *type);
+
+//Consulta si un elemento existe en la lista y retorna su posicion
+//si no existe retorna 0 (false)
+int existeS(lista lista, item x);
+
+//Retorna la cantidad de elementos de la lista si esta vacia retorna 0 (false)
+int tamanioS(lista lista);
+
+//elimina una lista por completo
+void eliminarS(lista *lista);
+
+//elimina un elemento en una posicion si la posicion es 0 retorna NULL
+lista eliminarPosS(lista lista, int pos);
+
+//ordena una lista de manera ascendente
+void ordenarS(lista lista);
+

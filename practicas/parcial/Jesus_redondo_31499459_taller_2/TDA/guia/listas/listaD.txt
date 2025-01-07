@@ -1,0 +1,46 @@
+//---------------------------------LISTAS DOBLEMENTE ENLAZADAS-------------------------------
+
+typedef struct NodoDoble {
+    itemD elem;
+    struct NodoDoble *prox;
+    struct NodoDoble *ant;
+} NodoDoble;
+typedef NodoDoble* listaD;
+//crea una lista vacia
+listaD crearD();
+
+//inserta un elemento en la lista
+listaD crearND(itemD x);
+
+//comprueba si una lista esta vacia o no
+int isvoidD(listaD lista);
+
+//inserta un elemento al inicio de la lista
+void insertarIniD(listaD *lista, itemD x);
+
+// inserta un elemento en una posicion valida (no nula)
+void insertarD(listaD *lista, itemD x, int pos);
+
+//Recorre a una posicion de la lista y retorna esa sublista
+//si la posicion es invalida retorna NULL
+listaD recorrerD(listaD lista, int pos);
+
+//muestra todos los elementos de la lista
+void imprimirD(listaD lista, char *type);
+
+//Consulta si un elemento existe en la lista y retorna su posicion
+//si no existe retorna 0 (false)
+int existeD(listaD lista, itemD x);
+
+//Retorna la cantidad de elementos de la lista si esta vacia retorna 0 (false)
+int tamanioD(listaD lista);
+
+//elimina una lista por completo
+void eliminarD(listaD *lista);
+
+//elimina un elemento en una posicion si la posicion es 0 retorna NULL
+listaD eliminarPosD(listaD lista, int pos);
+
+//ordena una lista de manera ascendente
+void ordenarD(listaD lista);
+

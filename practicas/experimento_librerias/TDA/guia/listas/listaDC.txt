@@ -1,0 +1,46 @@
+//---------------------------------LISTAS DOBLEMENTE ENLAZADAS CIRCULARMENTE-------------------------------
+
+typedef struct NodoDobleC {
+    itemDC elem;
+    struct NodoDobleC *ant;
+    struct NodoDobleC *prox;
+} NodoDobleC;
+
+typedef NodoDobleC * listaDC;
+
+//crea una lista vacia
+listaDC crearDC();
+
+//crea un nodo que se apunta a si mismo en sus 2 direcciones
+listaDC crearNDC(itemDC x);
+
+//comprueba si esta vacio
+int isvoidDC(listaDC list);
+
+//inserta un elemento en la primera posicion
+void insertarIniDC(listaDC *list, itemDC x);
+
+//inserta un elemento en una posicion dada, 
+//si la posicion es mayor al tamaño+1 insertara en posicion%(tamanio(list+)+1)
+void insertarDC(listaDC *list, itemDC x, int pos);
+
+//recorre la lista y retorna la lista desde esa posicion
+listaDC recorrerDC(listaDC list, int pos);
+
+//imprime la lista
+void imprimirDC(listaDC list, char* type);
+
+//comprueba si un elemento existe en la lista y retorna su posicion
+int existeDC(listaDC list, itemDC x);
+
+//retorna la cantidad de elementos que tiene la lista
+int tamanioDC(listaDC list);
+
+//elimina la lista entera
+void eliminarDC(listaDC *list);
+
+//elimina una posicion de la lista
+listaDC eliminarPosDC(listaDC list, int pos);
+
+//ordena los elementos de la lista
+void ordenarDC(listaDC list);
